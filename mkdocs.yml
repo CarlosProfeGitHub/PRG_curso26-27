@@ -1,0 +1,41 @@
+site_name: Programación
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Inicio: index.md
+  - Presentación: presentación.md
+  - 1º Trimestre:
+    - "UD01: Elementos de un programa": ud01/index.md
+    - "UD02: Utilización de Objetos": ud02/index.md
+    - "UD03: Estructuras de control y Excepciones": ud03/index.md
+    - "UD04: Arrays, matrices y Recursividad": ud04/index.md
+  - 2º Trimestre:
+    - "UD05: Desarrollo de clases": ud05/index.md
+    - "UD06: Lectura y escritura de información": ud06/index.md
+    - "UD07: Colecciones y Funciones Lambda": ud07/index.md
+  - 3º Trimestre:
+    - "UD08: Composición, Herencia y Polimorfismo": ud08/index.md
+    - "UD09: Interfaces gráficas": ud09/index.md
+    - "UD10: Acceso a BBDD": ud10/index.md
+    - "UD11: BBDD OO": ud11/index.md
+  - Recursos: recursos.md
+
