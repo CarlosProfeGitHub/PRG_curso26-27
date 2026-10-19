@@ -3015,14 +3015,26 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition ejemplo">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">suma</span><span class="p">,</span><span class="w"> </span><span class="n">resta</span><span class="p">,</span><span class="w"> </span><span class="n">producto</span><span class="p">,</span><span class="w"> </span><span class="n">division</span><span class="p">,</span><span class="w"> </span><span class="n">resto</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="mi">8</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">      </span><span class="c1">// 13</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">     </span><span class="c1">// 3</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 40</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 1.6</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span><span class="w">     </span><span class="c1">// 3</span>
+</code></pre></div>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">La trampa de la división entera</p>
 <p>Si <strong>ambos</strong> operandos son enteros, el resultado es entero y se pierde la parte decimal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">      </span><span class="c1">// 1  (¡no 1.6!)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1.6 (con conversión explícita)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1.6</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.0</span><span class="p">);</span><span class="w">     </span><span class="c1">// 1.6 (porque 5.0 es double)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">      </span><span class="c1">// 1  (¡no 1.6!)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1.6 (con conversión explícita)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1.6</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.0</span><span class="p">);</span><span class="w">     </span><span class="c1">// 1.6 (porque 5.0 es double)</span>
 </code></pre></div>
 <p>Esta es probablemente la fuente de errores nº1 de la unidad. Usa <code>double</code> o una conversión explícita.</p>
 </div>
@@ -3076,6 +3088,19 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition ejemplo">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valor2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">compara</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w">  </span><span class="c1">// true</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w">  </span><span class="c1">// false</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">compara</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+</div>
 <h3 id="63-operadores-logicos">6.3. Operadores lógicos</h3>
 <table>
 <thead>
@@ -3092,7 +3117,7 @@
 <td style="text-align: left;"><code>true</code> solo si <strong>ambos</strong> operandos son <code>true</code>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>\|\|</code> o <code>\|</code></td>
+<td style="text-align: left;"><code>||</code> o <code>|</code></td>
 <td style="text-align: left;">OR</td>
 <td style="text-align: left;"><code>false</code> solo si <strong>ambos</strong> operandos son <code>false</code>.</td>
 </tr>
@@ -3108,6 +3133,21 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition ejemplo">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">sueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1400</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">34</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">logica</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">edad</span><span class="o">&lt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">  </span><span class="c1">//false</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&lt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">  </span><span class="c1">//false</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">edad</span><span class="o">&lt;</span><span class="mi">40</span><span class="p">);</span><span class="w">                </span><span class="c1">//false</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&gt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//true</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">logica</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">sueldo</span><span class="o">&lt;</span><span class="mi">1000</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">edad</span><span class="o">&gt;</span><span class="mi">40</span><span class="p">);</span><span class="w">   </span><span class="c1">//false</span>
+</code></pre></div>
+</div>
 <p><strong>Tablas de verdad</strong> (conviene memorizarlas):</p>
 <table>
 <thead>
@@ -3115,7 +3155,7 @@
 <th style="text-align: center;">A</th>
 <th style="text-align: center;">B</th>
 <th style="text-align: center;"><code>A &amp;&amp; B</code></th>
-<th style="text-align: center;"><code>A \|\| B</code></th>
+<th style="text-align: center;"><code>A || B</code></th>
 <th style="text-align: center;"><code>!A</code></th>
 <th style="text-align: center;"><code>A ^ B</code></th>
 </tr>
@@ -3177,34 +3217,63 @@
 <td style="text-align: left;"><strong>Siempre evalúa los dos</strong> operandos.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>\|\|</code></td>
+<td style="text-align: left;"><code>||</code></td>
 <td style="text-align: left;">OR cortocircuito</td>
 <td style="text-align: left;">Si el <strong>primer operando es <code>true</code></strong>, Java <strong>no evalúa el segundo</strong>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>\|</code></td>
+<td style="text-align: left;"><code>|</code></td>
 <td style="text-align: left;">OR bit a bit</td>
 <td style="text-align: left;"><strong>Siempre evalúa los dos</strong> operandos.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>¿Por qué importa?</strong> Con <code>&amp;&amp;</code> y <code>||</code> el programa es más eficiente y evita errores:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// Con &amp;  → ERROR: evalúa ambos lados aunque numeros sea null</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// Con &amp;&amp; → SEGURO: si numeros es null, no llega a mirar .length</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">// Con &amp;  → ERROR: evalúa ambos lados aunque numeros sea null</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// Con &amp;&amp; → SEGURO: si numeros es null, no llega a mirar .length</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numeros</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">numeros</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div class="admonition ejemplo">
+<p class="admonition-title">Ejemplo uso del operador &amp; bit a bit</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1100</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1010</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultado</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="mi">1100</span><span class="w">   </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="mi">1010</span><span class="w">   </span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="o">----</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="mi">1000</span><span class="w">   </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="mi">8</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <blockquote>
 <p><strong>Regla práctica:</strong> usa siempre <code>&amp;&amp;</code> y <code>||</code> para condiciones lógicas. Reserva <code>&amp;</code> y <code>|</code> solo para operaciones a nivel de bits.</p>
 </blockquote>
@@ -3230,37 +3299,46 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition ejemplo">
+<p class="admonition-title">Ejemplo</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">m</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 6</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">n</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h4 id="prefijo-a-frente-a-sufijo-a">Prefijo (<code>++A</code>) frente a sufijo (<code>A++</code>)</h4>
 <p>La posición del operador cambia <strong>cuándo</strong> se aplica el incremento:</p>
 <ul>
 <li><strong>Prefijo (<code>++A</code>)</strong> → primero incrementa, luego usa el nuevo valor.</li>
 <li><strong>Sufijo (<code>A++</code>)</strong> → primero usa el valor actual, luego incrementa.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// Prefijo</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">A</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">// Paso 1: A se incrementa → A vale 2</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">// Paso 2: B recibe el valor de A → B vale 2</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">// Resultado: A=2, B=2</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">// Sufijo</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// Paso 1: B recibe el valor ACTUAL de A → B vale 2</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1">// Paso 2: A se incrementa → A vale 3</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// Resultado: A=3, B=2</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">// Prefijo</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">A</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c1">// Paso 1: A se incrementa → A vale 2</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// Paso 2: B recibe el valor de A → B vale 2</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1">// Resultado: A=2, B=2</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// Sufijo</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="c1">// Paso 1: B recibe el valor ACTUAL de A → B vale 2</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="c1">// Paso 2: A se incrementa → A vale 3</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="c1">// Resultado: A=3, B=2</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="65-operadores-de-asignacion">6.5. Operadores de asignación</h3>
 <table>
@@ -3304,21 +3382,21 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dato1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">dato2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">dato</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w">   </span><span class="c1">// dato vale 10</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">dato2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 12</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">dato2</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 2</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">dato2</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 20</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">dato2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 2</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">dato1</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">dato2</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato1 vale 0</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">dato1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">dato2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">dato</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w">   </span><span class="c1">// dato vale 10</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">dato2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 12</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">dato2</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 2</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">dato2</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 20</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">dato2</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">dato1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato2 vale 2</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">dato1</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">dato2</span><span class="p">;</span><span class="w"> </span><span class="c1">// dato1 vale 0</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="66-operador-condicional">6.6. Operador condicional <code>?:</code></h3>
 <p>Único operador <strong>ternario</strong> de Java. Evalúa una condición y devuelve un resultado en función de si es verdadera o falsa. Necesita tres operandos:</p>
@@ -3327,12 +3405,23 @@
 <li><strong>Exp1</strong> (entre <code>?</code> y <code>:</code>): valor si la condición es <strong>verdadera</strong>.</li>
 <li><strong>Exp2</strong> (después de <code>:</code>): valor si la condición es <strong>falsa</strong>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>condición ? exp1 : exp2
-</code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">mayor</span><span class="p">,</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">exp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">mayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">exp1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">exp2</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">exp2</span><span class="p">;</span><span class="w">   </span><span class="c1">// mayor valdrá 25</span>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>condición ? exp1 : exp2</p>
+</div>
+<div class="admonition nota">
+<p class="admonition-title">Ejemplo, en la expresión:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span><span class="o">?</span><span class="n">x</span><span class="p">:</span><span class="n">y</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
+Se evalúa la condición de si x es mayor que y, en caso afirmativo se devuelve el valor de la variable x, y en caso contrario se devuelve el valor de y.</p>
+</div>
+<div class="admonition nota">
+<p class="admonition-title">Ejemplo para calcular qué número es mayor:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">mayor</span><span class="p">,</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">exp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">mayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">exp1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">exp2</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">exp1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">exp2</span><span class="p">;</span><span class="w">   </span><span class="c1">// mayor valdrá 25</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <p>El operador condicional se puede sustituir por la sentencia <code>if...else</code>, que veremos más adelante.</p>
 <h3 id="67-prevalencia-de-operadores">6.7. Prevalencia de operadores</h3>
 <p>Los operadores tienen diferente <strong>prioridad</strong>. Es interesante utilizar paréntesis para controlar las operaciones sin depender de la prevalencia.</p>
@@ -3383,7 +3472,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">Operador OR</td>
-<td style="text-align: left;"><code>\|</code></td>
+<td style="text-align: left;"><code>|</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">AND booleano</td>
@@ -3391,7 +3480,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">OR booleano</td>
-<td style="text-align: left;"><code>\|\|</code></td>
+<td style="text-align: left;"><code>||</code></td>
 </tr>
 <tr>
 <td style="text-align: left;">Condicional</td>
@@ -3403,41 +3492,41 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w">      </span><span class="c1">// 22  (la multiplicación se hace primero)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w">    </span><span class="c1">// 64  (los paréntesis mandan)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">y3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w">      </span><span class="c1">// 22  (la multiplicación se hace primero)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">y1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y3</span><span class="p">;</span><span class="w">    </span><span class="c1">// 64  (los paréntesis mandan)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="68-operadores-de-bits-y-desplazamientos">6.8. Operadores de bits y desplazamientos</h3>
 <p>Estos operadores trabajan con la representación <strong>binaria</strong> de los enteros:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span><span class="w">   </span><span class="c1">// q: 00000000000000000000000010000100</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="p">;</span><span class="w">   </span><span class="c1">// r: 00000000000000000000000010010000</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// s: 00000000000000000000000010000000 → 128</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// t: 00000000000000000000000010010100 → 148</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// u: 00000000000000000000000000010100 → 20</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">q</span><span class="p">;</span><span class="w">    </span><span class="c1">// v: 11111111111111111111111101111011 → -133</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00000000000000000000000010000100 → 132</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="kt">int</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00000000000000000000000000100001 → 33</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 00111111111111111111111111111111 → 1073741823</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span><span class="w">   </span><span class="c1">// q: 00000000000000000000000010000100</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="p">;</span><span class="w">   </span><span class="c1">// r: 00000000000000000000000010010000</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// s: 00000000000000000000000010000000 → 128</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// t: 00000000000000000000000010010100 → 148</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"> </span><span class="c1">// u: 00000000000000000000000000010100 → 20</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="n">q</span><span class="p">;</span><span class="w">    </span><span class="c1">// v: 11111111111111111111111101111011 → -133</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00000000000000000000000010000100 → 132</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="kt">int</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">132</span><span class="p">;</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 00000000000000000000000000100001 → 33</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 00111111111111111111111111111111 → 1073741823</span>
 </code></pre></div></td></tr></table></div>
 <table>
 <thead>
@@ -3469,7 +3558,7 @@
 <td style="text-align: left;">1 solo si ambos bits son 1</td>
 </tr>
 <tr>
-<td style="text-align: center;"><code>\|</code></td>
+<td style="text-align: center;"><code>|</code></td>
 <td style="text-align: left;">OR bit a bit</td>
 <td style="text-align: left;">1 si alguno de los bits es 1</td>
 </tr>
@@ -3485,10 +3574,6 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Para qué sirve esto en 1º DAM</p>
-<p>Los desplazamientos de bits son la base del cálculo de <strong>máscaras de red</strong> y subredes que verás en el módulo de redes, y de muchas optimizaciones internas del lenguaje.</p>
-</div>
 <hr />
 
 

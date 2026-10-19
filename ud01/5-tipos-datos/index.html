@@ -2941,7 +2941,7 @@
 <td style="text-align: left;">−2.147.483.648 … 2.147.483.647</td>
 <td style="text-align: center;"><code>0</code></td>
 <td style="text-align: left;"><code>Integer</code></td>
-<td style="text-align: left;"><code>int d = -30;</code><br><code>int e = 0xC125;</code></td>
+<td style="text-align: left;"><code>int d = -30;</code><br><code>int e = 0xC125; //0x indica hexadecimal</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>long</code></td>
@@ -2949,7 +2949,7 @@
 <td style="text-align: left;">−9,2×10¹⁸ … 9,2×10¹⁸</td>
 <td style="text-align: center;"><code>0</code></td>
 <td style="text-align: left;"><code>Long</code></td>
-<td style="text-align: left;"><code>long f = 5L;</code></td>
+<td style="text-align: left;"><code>long f = 5L; //la L indica que es long</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>float</code></td>
@@ -2957,7 +2957,7 @@
 <td style="text-align: left;">−3,4×10⁻³⁸ … 3,4×10³⁸</td>
 <td style="text-align: center;"><code>0.0</code></td>
 <td style="text-align: left;"><code>Float</code></td>
-<td style="text-align: left;"><code>float pi = 3.14F;</code></td>
+<td style="text-align: left;"><code>float pi = 3.14F; // la F indica float</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>double</code></td>
@@ -2965,7 +2965,7 @@
 <td style="text-align: left;">−1,8×10⁻³⁰⁸ … 1,8×10³⁰⁸</td>
 <td style="text-align: center;"><code>0.0</code></td>
 <td style="text-align: left;"><code>Double</code></td>
-<td style="text-align: left;"><code>double millon = 1e6;</code><br><code>double z = .123;</code></td>
+<td style="text-align: left;"><code>double millon = 1e6;</code><br><code>double z = .123; // la parte entera 0 se puede omitir</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>char</code></td>
@@ -2973,7 +2973,7 @@
 <td style="text-align: left;"><code>\u0000</code> … <code>\uFFFF</code></td>
 <td style="text-align: center;"><code>\u0000</code></td>
 <td style="text-align: left;"><code>Character</code></td>
-<td style="text-align: left;"><code>char c = 'c';</code><br><code>char car2 = 99;</code><br><code>char letra = '\u0063';</code></td>
+<td style="text-align: left;"><code>char c = 'c';</code><br><code>char car2 = 99; // 'c' equivale al ASCII 99</code><br><code>char letra = '\u0063'; // código unicode de 'c'</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>boolean</code></td>
@@ -3073,16 +3073,18 @@
 <span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w">          </span><span class="c1">// literal entero decimal</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">hexa</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0xC125</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal entero hexadecimal</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">binario</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1010</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal entero binario</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kt">long</span><span class="w"> </span><span class="n">grande</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">5L</span><span class="p">;</span><span class="w">          </span><span class="c1">// literal long (sufijo L)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal decimal (double por defecto)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kt">double</span><span class="w"> </span><span class="n">cienMil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e5</span><span class="p">;</span><span class="w">         </span><span class="c1">// literal en notación científica</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span><span class="w">         </span><span class="c1">// literal carácter</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">activo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal booleano</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">"Hola"</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal String</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal nulo</span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w">          </span><span class="c1">// literal entero decimal</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">hexa</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mh">0xC125</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal entero hexadecimal //49445 decimal</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">binario</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1010</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal entero binario //10 decimal</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">octal</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mo">012</span><span class="p">;</span><span class="w">         </span><span class="c1">// literal entero octal //10 decimal</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">long</span><span class="w"> </span><span class="n">grande</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">5L</span><span class="p">;</span><span class="w">          </span><span class="c1">// literal long (sufijo L)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kt">double</span><span class="w"> </span><span class="n">precio</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal decimal (double por defecto)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kt">double</span><span class="w"> </span><span class="n">cienMil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e5</span><span class="p">;</span><span class="w">         </span><span class="c1">// literal en notación científica //100000.0 decimal</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span><span class="w">         </span><span class="c1">// literal carácter</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">activo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal booleano</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">"Hola"</span><span class="p">;</span><span class="w">      </span><span class="c1">// literal String</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">        </span><span class="c1">// literal nulo</span>
 </code></pre></div></td></tr></table></div>
 <table>
 <thead>
@@ -3138,7 +3140,20 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">        </span><span class="c1">// true  (misma referencia en el pool)</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">b</span><span class="p">));</span><span class="w">   </span><span class="c1">// true  (mismo contenido: esto compara el texto)</span>
 </code></pre></div>
-<p>Usa <strong>siempre <code>equals()</code></strong> para comparar el contenido de dos cadenas.</p>
+<p>El operador == compara si ambas variables apuntan al mismo objeto en memoria.
+Los literales de tipo String se almacenan en una zona especial llamada String Pool. Como "hola" aparece dos veces, Java reutiliza el mismo objeto: 
+    a ──► "hola" ◄── b</p>
+<p>El método equals() compara el contenido de las cadenas: "h" "o" "l" "a". Usa <strong>siempre <code>equals()</code></strong> para comparar el contenido de dos cadenas.</p>
+<p>Caso interesante: usando new
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">"hola"</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">String</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="p">(</span><span class="s">"hola"</span><span class="p">);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">        </span><span class="c1">// false  (distinta referencia en el pool)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">b</span><span class="p">));</span><span class="w">   </span><span class="c1">// true  (mismo contenido: esto compara el texto)</span>
+</code></pre></div>
+En este caso, tenemos dos objetos distintos:<br />
+    a ──► "hola"
+    b ──► "hola"</p>
 </div>
 <h3 id="56-secuencias-de-escape">5.6. Secuencias de escape</h3>
 <p>Dentro de un literal <code>char</code> o <code>String</code> hay caracteres que no se pueden escribir directamente. Para representarlos se usan <strong>secuencias de escape</strong>, que empiezan siempre con <code>\</code>:</p>
@@ -3188,13 +3203,13 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Línea 1\nLínea 2"</span><span class="p">);</span><span class="w">      </span><span class="c1">// salto de línea</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Col1\tCol2\tCol3"</span><span class="p">);</span><span class="w">      </span><span class="c1">// columnas con tabulador</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dice: \"Hola\""</span><span class="p">);</span><span class="w">        </span><span class="c1">// comillas dentro de String</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kt">char</span><span class="w"> </span><span class="n">barra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\\'</span><span class="p">;</span><span class="w">                           </span><span class="c1">// el carácter \</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Línea 1\nLínea 2"</span><span class="p">);</span><span class="w">      </span><span class="c1">// salto de línea</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Col1\tCol2\tCol3"</span><span class="p">);</span><span class="w">      </span><span class="c1">// columnas con tabulador</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Dice: \"Hola\""</span><span class="p">);</span><span class="w">        </span><span class="c1">// comillas dentro de String</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kt">char</span><span class="w"> </span><span class="n">barra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\\'</span><span class="p">;</span><span class="w">                           </span><span class="c1">// el carácter \</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="57-mostrar-datos-por-pantalla">5.7. Mostrar datos por pantalla</h3>
 <table>
@@ -3219,62 +3234,62 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Nombre: "</span><span class="p">);</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span><span class="w">          </span><span class="c1">// Nombre: Ana</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// Edad: 17</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ana"</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Nombre: "</span><span class="p">);</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span><span class="w">          </span><span class="c1">// Nombre: Ana</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Edad: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// Edad: 17</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="58-tipos-enumerados-enum">5.8. Tipos enumerados (<code>enum</code>)</h3>
 <p>Los tipos enumerados permiten declarar una variable que solo puede tomar un conjunto <strong>restringido y predefinido</strong> de valores.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">Lunes</span><span class="p">,</span><span class="w"> </span><span class="n">Martes</span><span class="p">,</span><span class="w"> </span><span class="n">Miercoles</span><span class="p">,</span><span class="w"> </span><span class="n">Jueves</span><span class="p">,</span><span class="w"> </span><span class="n">Viernes</span><span class="p">,</span><span class="w"> </span><span class="n">Sabado</span><span class="p">,</span><span class="w"> </span><span class="n">Domingo</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="n">Lunes</span><span class="p">,</span><span class="w"> </span><span class="n">Martes</span><span class="p">,</span><span class="w"> </span><span class="n">Miercoles</span><span class="p">,</span><span class="w"> </span><span class="n">Jueves</span><span class="p">,</span><span class="w"> </span><span class="n">Viernes</span><span class="p">,</span><span class="w"> </span><span class="n">Sabado</span><span class="p">,</span><span class="w"> </span><span class="n">Domingo</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Los valores del <code>enum</code> son constantes, por eso se escriben en <code>UpperCamelCase</code> o, según el contexto, en <code>MAYÚSCULAS</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-9-10">10</a></span>
-<span class="normal"><a href="#__codelineno-9-11">11</a></span>
-<span class="normal"><a href="#__codelineno-9-12">12</a></span>
-<span class="normal"><a href="#__codelineno-9-13">13</a></span>
-<span class="normal"><a href="#__codelineno-9-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TiposEnumerados</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="n">Lunes</span><span class="p">,</span><span class="w"> </span><span class="n">Martes</span><span class="p">,</span><span class="w"> </span><span class="n">Miercoles</span><span class="p">,</span><span class="w"> </span><span class="n">Jueves</span><span class="p">,</span><span class="w"> </span><span class="n">Viernes</span><span class="p">,</span><span class="w"> </span><span class="n">Sabado</span><span class="p">,</span><span class="w"> </span><span class="n">Domingo</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="n">Dia</span><span class="w"> </span><span class="n">diaActual</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">Martes</span><span class="p">;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="n">Dia</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">Miercoles</span><span class="p">;</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hoy es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaActual</span><span class="p">);</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Mañana es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="p">);</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TiposEnumerados</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">Dia</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="n">Lunes</span><span class="p">,</span><span class="w"> </span><span class="n">Martes</span><span class="p">,</span><span class="w"> </span><span class="n">Miercoles</span><span class="p">,</span><span class="w"> </span><span class="n">Jueves</span><span class="p">,</span><span class="w"> </span><span class="n">Viernes</span><span class="p">,</span><span class="w"> </span><span class="n">Sabado</span><span class="p">,</span><span class="w"> </span><span class="n">Domingo</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="n">Dia</span><span class="w"> </span><span class="n">diaActual</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">Martes</span><span class="p">;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">Dia</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dia</span><span class="p">.</span><span class="na">Miercoles</span><span class="p">;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hoy es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaActual</span><span class="p">);</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Mañana es: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaSiguiente</span><span class="p">);</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Hoy es: Martes
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Mañana es: Miercoles
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Hoy es: Martes
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Mañana es: Miercoles
 </code></pre></div>
 </div>
 </div>
