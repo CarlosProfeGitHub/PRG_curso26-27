@@ -2970,7 +2970,7 @@
 </code></pre></div></td></tr></table></div>
 <details class="success">
 <summary>Solución</summary>
-<p>Imprime <strong>1</strong>.</p>
+<p>Imprime <strong>3</strong>.</p>
 <p>Se evalúa <code>a &gt; b &amp;&amp; a &gt; c</code> → <code>12 &gt; 5</code> es cierto <strong>y</strong> <code>12 &gt; 20</code> es falso → el <code>&amp;&amp;</code> completo es <strong>falso</strong>. Se pasa al <code>else if</code>: <code>b &gt; c</code> → <code>5 &gt; 20</code> es falso. Se toma el <code>else</code> → <code>resultado = 3</code>.</p>
 <table>
 <thead>
@@ -3002,7 +3002,7 @@
 </tr>
 </tbody>
 </table>
-<p>Fíjate en el <strong>cortocircuito</strong> del <code>&amp;&amp;</code>: al ser falso el primer operando, Java ni siquiera evalúa el segundo. Nunca debes poner algo con efecto secundario a la derecha de un <code>&amp;&amp;</code>.</p>
+<p>Fíjate en el posible <strong>cortocircuito</strong> del <code>&amp;&amp;</code>: si hubiese sido falseo el primer operando, Java ni siquiera hubiera evaluado el segundo. Nunca debes poner algo con efecto secundario a la derecha de un <code>&amp;&amp;</code>.</p>
 </details>
 <h3 id="traza-02-el-orden-de-las-condiciones">Traza 02 · El orden de las condiciones</h3>
 <p>Datos: <code>nota = 7</code>. ¿Qué imprime este programa?</p>
