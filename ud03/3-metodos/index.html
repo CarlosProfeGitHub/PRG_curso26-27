@@ -1532,10 +1532,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-anatomia-de-un-metodo" class="md-nav__link">
+  <a href="#31-anatomia-de-un-metodo-que-devuelve-un-valor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Anatomía de un método
+        3.1. Anatomía de un método que devuelve un valor
       
     </span>
   </a>
@@ -2805,10 +2805,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#31-anatomia-de-un-metodo" class="md-nav__link">
+  <a href="#31-anatomia-de-un-metodo-que-devuelve-un-valor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Anatomía de un método
+        3.1. Anatomía de un método que devuelve un valor
       
     </span>
   </a>
@@ -2888,12 +2888,12 @@
 
 
 <h1 id="3-metodos-firma-cuerpo-y-llamada">3. Métodos: firma, cuerpo y llamada</h1>
-<p>En Java, <strong>todo vive dentro de una clase</strong> (ya lo estudiaste en la UD01) y todo el comportamiento se expresa mediante <strong>métodos</strong>. Un método es un bloque de código con nombre al que se puede llamar para que haga su trabajo.</p>
+<p>En Java, <strong>todo vive dentro de una clase</strong> y todo el comportamiento se expresa mediante <strong>métodos</strong>. Un método es un bloque de código con nombre al que se puede llamar para que haga su trabajo.</p>
 <div class="admonition abstract">
 <p class="admonition-title">La idea en una frase</p>
-<p><em>Un método es una caja con nombre: le metes datos por un lado y te devuelve un resultado por el otro.</em></p>
+<p><em>Un método es una caja negra con nombre: tiene un input para la entrada de datos y un output para la salida del resultado.</em></p>
 </div>
-<h2 id="31-anatomia-de-un-metodo">3.1. Anatomía de un método</h2>
+<h2 id="31-anatomia-de-un-metodo-que-devuelve-un-valor">3.1. Anatomía de un método que devuelve un valor</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> </span>
 <span class="normal"> </span>
 <span class="normal"> </span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">areaTriangulo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">altura</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2941,6 +2941,12 @@
 <td style="text-align: left;">Los datos que recibe: nombre y tipo de cada uno.</td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>return</code></td>
+<td style="text-align: left;"><strong>Valor devuelto</strong></td>
+<td style="text-align: center;">NO</td>
+<td style="text-align: left;">El resultado que será devuelto.</td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>{ ... }</code></td>
 <td style="text-align: left;"><strong>Cuerpo del método</strong></td>
 <td style="text-align: center;">Sí</td>
@@ -2983,7 +2989,7 @@
 <p>Dos métodos con <strong>firma distinta</strong> son métodos distintos, aunque se llamen igual (eso es la <a href="../7-sobrecarga/">sobrecarga</a>).</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Java ejecuta los métodos de arriba abajo</p>
+<p class="admonition-title">Ubicación de los métodos: antes o después del main()</p>
 <p>A diferencia de la UD01, donde <code>main</code> tenía que ser la <strong>primera</strong> instrucción, aquí el orden de las líneas <strong>no importa</strong>: Java salta directamente al método que indicas y ejecuta su cuerpo entero.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  </span>
 <span class="normal">  </span>
