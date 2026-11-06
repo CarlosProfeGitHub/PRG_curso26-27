@@ -3185,32 +3185,39 @@
 <tr>
 <th style="text-align: left;">Método</th>
 <th style="text-align: left;">Devuelve</th>
+<th style="text-align: left;">Comentario</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><code>nextInt()</code></td>
 <td style="text-align: left;">Un <code>int</code></td>
+<td style="text-align: left;">Ignorando los espacios en blanco, tabulaciones y saltos de línea que pueda haber <strong>antes</strong> del int. Deja el \n en el buffer</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>nextLong()</code></td>
 <td style="text-align: left;">Un <code>long</code></td>
+<td style="text-align: left;">Ignorando los espacios en blanco, tabulaciones y saltos de línea que pueda haber <strong>antes</strong> del entero long.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>nextDouble()</code></td>
 <td style="text-align: left;">Un <code>double</code></td>
+<td style="text-align: left;">Ignorando los espacios en blanco, tabulaciones y saltos de línea que pueda haber <strong>antes</strong> del double.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>nextBoolean()</code></td>
 <td style="text-align: left;">Un <code>boolean</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>nextLine()</code></td>
-<td style="text-align: left;">Toda la línea como <code>String</code></td>
+<td style="text-align: left;">Ignorando los espacios en blanco, tabulaciones y saltos de línea que pueda haber <strong>antes</strong> del boolean.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>next()</code></td>
 <td style="text-align: left;">El primer.token (palabra) como <code>String</code></td>
+<td style="text-align: left;">Ignorando los espacios en blanco, tabulaciones y saltos de línea que pueda haber <strong>antes</strong> del String.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>nextLine()</code></td>
+<td style="text-align: left;">Toda la línea como <code>String</code></td>
+<td style="text-align: left;">Lee <strong>todo</strong> hasta encontrar el salto de línea <code>\n</code></td>
 </tr>
 </tbody>
 </table>
