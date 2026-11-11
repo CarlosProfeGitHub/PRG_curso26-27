@@ -2414,10 +2414,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#actividad-10-el-recorrido-que-ya-sabes" class="md-nav__link">
+  <a href="#actividad-10-sumar-todos-los-elementos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 10 · El recorrido que ya sabes
+        Actividad 10 · Sumar todos los elementos
       
     </span>
   </a>
@@ -2425,10 +2425,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-11-del-1-al-100-con-array" class="md-nav__link">
+  <a href="#actividad-11-sumar-pares-e-impares" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 11 · Del 1 al 100 con array
+        Actividad 11 · Sumar pares e impares
       
     </span>
   </a>
@@ -3326,10 +3326,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#actividad-10-el-recorrido-que-ya-sabes" class="md-nav__link">
+  <a href="#actividad-10-sumar-todos-los-elementos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 10 · El recorrido que ya sabes
+        Actividad 10 · Sumar todos los elementos
       
     </span>
   </a>
@@ -3337,10 +3337,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-11-del-1-al-100-con-array" class="md-nav__link">
+  <a href="#actividad-11-sumar-pares-e-impares" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 11 · Del 1 al 100 con array
+        Actividad 11 · Sumar pares e impares
       
     </span>
   </a>
@@ -3801,19 +3801,22 @@
 </div>
 <hr />
 <h3 id="bloque-42-recorridos">Bloque 4.2 · Recorridos</h3>
-<h4 id="actividad-10-el-recorrido-que-ya-sabes">Actividad 10 · El recorrido que ya sabes</h4>
-<p>Escribe un método <code>static double suma(double[] datos)</code> que devuelva la suma de todos los elementos. Resuélvelo <strong>dos veces</strong>: una con <code>for</code> clásico y otra con <code>for-each</code>.</p>
-<h4 id="actividad-11-del-1-al-100-con-array">Actividad 11 · Del 1 al 100 con array</h4>
-<p>Crea un array de 100 enteros, rellénalo con los números del 1 al 100 y muestra la suma de los pares y la de los impares por separado.</p>
+<h4 id="actividad-10-sumar-todos-los-elementos">Actividad 10 · Sumar todos los elementos</h4>
+<p>Crea un array de 10 enteros y haciendo uso de un método 
+<code>static void rellenarAleatorios(int vector[])</code> rellénalo con valores aleatorios entre el 1 al 10. Calcula la suma de todos los elementos haciendo uso del método <code>static int suma(int[] datos)</code> (Puedes resolver este método suma <strong>dos veces</strong>: una con <code>for</code> clásico y otra con <code>for-each</code>).</p>
+<h4 id="actividad-11-sumar-pares-e-impares">Actividad 11 · Sumar pares e impares</h4>
+<p>Utilizando el array del ejercicio anterior, muestra la suma de los pares y la de los impares hacinedo uso de:</p>
+<p><code>static int sumaPares(int[] datos)</code> y <code>static int sumaImpares(int[] datos)</code>.</p>
 <h4 id="actividad-12-maximo-y-minimo">Actividad 12 · Máximo y mínimo</h4>
-<p>Escribe <code>static int maximo(int[] datos)</code> y <code>static int minimo(int[] datos)</code>.</p>
+<p>Utilizando el array del ejercicio anterior, mostrar el valor máximo y mínimo haciendo uso de:</p>
+<p><code>static int maximo(int[] datos)</code> y <code>static int minimo(int[] datos)</code>.</p>
 <details class="danger">
 <summary>El requisito que no debes incumplir</summary>
 <p>Ambos métodos deben <strong>funcionar también con valores negativos</strong>. Para comprobarlo, prueba con <code>{-5, -2, -9}</code>: los dos deben devolver <code>-2</code>.</p>
 <p>Si inicializas el valor de partida con <code>0</code>, ambos fallarán.</p>
 </details>
 <h4 id="actividad-13-posiciones-del-maximo">Actividad 13 · Posiciones del máximo</h4>
-<p>Escribe un método que devuelva <strong>todas</strong> las posiciones donde aparece el valor máximo, en un array de enteros.</p>
+<p>Utilizando el array del ejercicio anterior, escribe un método que devuelva <strong>todas</strong> las posiciones donde aparece el valor máximo.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Array: [3, 7, 3, 9, 7, 3]
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Máximo: 9 → posiciones: [3]
 </code></pre></div>
@@ -3822,7 +3825,7 @@
 <p>Primero cuenta cuántas veces aparece el máximo, luego crea el array de ese tamaño y rellénalo. Es el mismo patrón que el <code>obtenerSuspensos()</code> del ejemplo integrado.</p>
 </details>
 <h4 id="actividad-14-recorrido-descendente">Actividad 14 · Recorrido descendente</h4>
-<p>Escribe un método que muestre un array <strong>del revés</strong>, y otro que devuelva el <strong>último</strong> número par del array (o <code>-1</code> si no hay ninguno).</p>
+<p>Utilizando el array del ejercicio anterior, escribe un método que muestre el array <strong>del revés</strong>, y otro que devuelva el <strong>último</strong> número par del array (o <code>-1</code> si no hay ninguno).</p>
 <h4 id="actividad-15-tabla-de-multiplicar-en-un-array">Actividad 15 · Tabla de multiplicar en un array</h4>
 <p>Crea un array de 11 enteros, rellénalo con la tabla de multiplicar del 7 (del 0 al 10) y muéstralo con <code>Arrays.toString()</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
@@ -3830,7 +3833,7 @@
 <hr />
 <h3 id="bloque-43-busquedas">Bloque 4.3 · Búsquedas</h3>
 <h4 id="actividad-16-buscar-un-valor">Actividad 16 · Buscar un valor</h4>
-<p>Escribe un método <code>static int buscar(int[] datos, int valor)</code> que devuelva la posición de la <strong>primera</strong> aparición, o <code>-1</code> si no está.</p>
+<p>Escribe un método <code>static int buscar(int[] datos, int valor)</code> que devuelva la posición de la <strong>primera</strong> aparición del elemento valor en el array, o <code>-1</code> si no está.</p>
 <h4 id="actividad-17-buscar-un-valor-en-un-array-ordenado">Actividad 17 · Buscar un valor en un array <strong>ordenado</strong></h4>
 <p>Repite la actividad anterior, pero <strong>sin recorrer el array entero</strong>: usa el algoritmo de <strong>búsqueda binaria</strong>.</p>
 <details class="warning">
