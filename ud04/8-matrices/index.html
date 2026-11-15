@@ -12,7 +12,7 @@
         <link rel="prev" href="../7-ordenacion/">
       
       
-        <link rel="next" href="../9-multidimensionales/">
+        <link rel="next" href="../9-clase-arrays/">
       
       
         
@@ -361,7 +361,7 @@
   <span class="md-ellipsis">
     
   
-    2. De la idea al algoritmo
+    2. De la idea al algoritmo: piensa como un programador
   
 
     
@@ -557,7 +557,7 @@
   <span class="md-ellipsis">
     
   
-    9. Herramientas: Math, Scanner y Random
+    9. Herramientas: `Math`, `Scanner` y `Random`
   
 
     
@@ -613,7 +613,7 @@
   <span class="md-ellipsis">
     
   
-    11. Ejemplo integrado
+    11. Ejemplo integrado de la unidad
   
 
     
@@ -725,7 +725,7 @@
   <span class="md-ellipsis">
     
   
-    15. Errores frecuentes
+    15. Errores frecuentes y cómo solucionarlos
   
 
     
@@ -753,7 +753,7 @@
   <span class="md-ellipsis">
     
   
-    16. Checklist de dominio
+    16. Checklist de dominio (autoevaluación)
   
 
     
@@ -810,6 +810,34 @@
     
   
     18. Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ud01/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examen · UD01 · Introducción a la programación en Java
   
 
     
@@ -975,7 +1003,7 @@
   <span class="md-ellipsis">
     
   
-    4. El operador ternario y switch
+    4. El operador ternario y la estructura `switch`
   
 
     
@@ -1143,7 +1171,7 @@
   <span class="md-ellipsis">
     
   
-    10. Ejemplo integrado
+    10. Ejemplo integrado de la unidad
   
 
     
@@ -1255,7 +1283,7 @@
   <span class="md-ellipsis">
     
   
-    14. Errores frecuentes
+    14. Errores frecuentes y cómo solucionarlos
   
 
     
@@ -1283,7 +1311,7 @@
   <span class="md-ellipsis">
     
   
-    15. Checklist de dominio
+    15. Checklist de dominio (autoevaluación)
   
 
     
@@ -1673,7 +1701,7 @@
   <span class="md-ellipsis">
     
   
-    10. Ejemplo integrado
+    10. Ejemplo integrado de la unidad
   
 
     
@@ -1785,7 +1813,7 @@
   <span class="md-ellipsis">
     
   
-    14. Errores frecuentes
+    14. Errores frecuentes y cómo solucionarlos
   
 
     
@@ -1813,7 +1841,7 @@
   <span class="md-ellipsis">
     
   
-    15. Checklist de dominio
+    15. Checklist de dominio (autoevaluación)
   
 
     
@@ -2037,7 +2065,7 @@
   <span class="md-ellipsis">
     
   
-    4. El atributo length y los arrays como parámetros
+    4. El atributo `length` y los arrays como parámetros
   
 
     
@@ -2121,7 +2149,7 @@
   <span class="md-ellipsis">
     
   
-    7. Problemas de ordenación y for-each
+    7. Problemas de ordenación y `for-each`
   
 
     
@@ -2324,10 +2352,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#86-una-matriz-como-array-de-arrays" class="md-nav__link">
+  <a href="#86-matriz-multidimensional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.6. Una matriz como array de arrays
+        8.6. Matriz multidimensional
       
     </span>
   </a>
@@ -2350,14 +2378,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../9-multidimensionales/" class="md-nav__link">
+      <a href="../9-clase-arrays/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. Arrays multidimensionales y la librería Arrays
+    9. La librería `Arrays`
   
 
     
@@ -2385,7 +2413,7 @@
   <span class="md-ellipsis">
     
   
-    10. Ejemplo integrado
+    10. Ejemplo integrado de la unidad
   
 
     
@@ -2497,7 +2525,7 @@
   <span class="md-ellipsis">
     
   
-    14. Errores frecuentes
+    14. Errores frecuentes y cómo solucionarlos
   
 
     
@@ -2525,7 +2553,7 @@
   <span class="md-ellipsis">
     
   
-    15. Checklist de dominio
+    15. Checklist de dominio (autoevaluación)
   
 
     
@@ -2994,10 +3022,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#86-una-matriz-como-array-de-arrays" class="md-nav__link">
+  <a href="#86-matriz-multidimensional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.6. Una matriz como array de arrays
+        8.6. Matriz multidimensional
       
     </span>
   </a>
@@ -3353,25 +3381,41 @@ Permite crear las filas por separado y, por tanto, <strong>darles tamaños disti
 </code></pre></div>
 <p>El tipo de la variable del <code>for-each</code> debe ser <strong>exactamente</strong> el tipo de los componentes del array que recorres.</p>
 </div>
-<h2 id="86-una-matriz-como-array-de-arrays">8.6. Una matriz como array de arrays</h2>
-<div class="admonition example">
-<p class="admonition-title">Recorrido "raro" que solo funciona por casualidad</p>
-<p>Este código recorre la matriz <strong>diagonalmente</strong> y funciona <strong>solo</strong> porque todas las filas miden igual:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m4</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">m4</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>Con <code>m4</code> de 4×4 imprime <code>7 2 3 4</code> (la diagonal). Si la matriz fuera 5×4, en la última vuelta <code>m4[4][4]</code> daría <code>ArrayIndexOutOfBoundsException</code>.</p>
+<h2 id="86-matriz-multidimensional">8.6. Matriz multidimensional</h2>
+<div class="admonition abstract">
+<p class="admonition-title">El anidamiento se puede generalizar</p>
+<p>Como una matriz es un array de arrays, y un array puede contener arrays… el anidamiento <strong>no tiene límite de dos niveles</strong>.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">// Notas de 10 alumnos, en 5 asignaturas, en 3 evaluaciones</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="hll"><span class="kt">int</span><span class="o">[][][]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">5</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span>
+</span><a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="c1">// El alumno 2, en la asignatura 3, ha sacado un 5 en la primera evaluación</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="hll"><span class="n">notas</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><a id="__codelineno-15-6" name="__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="hll"><span class="kt">double</span><span class="o">[][][][][]</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">7</span><span class="o">][</span><span class="mi">10</span><span class="o">][</span><span class="mi">4</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">La legibilidad se desploma muy rápido</p>
+<p>Leer <code>notas[2][3][1]</code> exige contar los corchetes con el dedo. Con cinco dimensiones, el código es prácticamente imposible de mantener.</p>
 <div class="admonition tip">
-<p class="admonition-title">Una forma más segura de recorrer una diagonal</p>
-<p>Usar la longitud de la <strong>primera</strong> fila como límite del segundo índice:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">m4</span><span class="p">.</span><span class="na">length</span><span class="p">,</span><span class="w"> </span><span class="n">m4</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">m4</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span>
+<p class="admonition-title">La regla práctica</p>
+<p>En la vida real es <strong>raro</strong> necesitar más de tres dimensiones, y cuando aparece, se suele recordar que un array de una o dos dimensiones ya era más manejable.</p>
+<div class="admonition example">
+<p class="admonition-title">El truco de "aplanar"</p>
+<p>En lugar de un array de 10 × 5 × 3, usa un array de 10 × 5 y guarda las tres notas <strong>dentro</strong> de cada posición:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">int</span><span class="o">[][]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span><span class="w">      </span><span class="c1">// 10 alumnos, 5 asignaturas</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">notas</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">};</span><span class="w">            </span><span class="c1">// Su evaluación en la asignatura 3</span>
 </code></pre></div>
+<p>Es mucho más legible, y ocupa exactamente lo mismo.</p>
 </div>
 </div>
-<hr />
+</div>
 
 
 
